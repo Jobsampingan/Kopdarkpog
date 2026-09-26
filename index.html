@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="KOPDAR BATCH 5 KPOG, 7 Pondasi Jualan Online bersama Bundadari Ainun. Ahad, 04 Oktober 2026, Grand Ballroom Eljie Hotel Gorontalo.">
+<title>KOPDAR BATCH 5, 7 Pondasi Jualan Online | KPOG</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<style>
+  :root{
+    --ink:#082f49;
+    --ivory:#fffdf9;
+    --sky:#0284c7;
+    --sky-bright:#0ea5e9;
+    --rose:#f43f5e;
+    --amber:#fbbf24;
+  }
+
+  html,body{
+    width:100%;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+
+  .font-display{
+    font-family:"Bricolage Grotesque","Plus Jakarta Sans",sans-serif;
+    font-weight:800;
+    letter-spacing:-.03em;
+    line-height:.94;
+  }
+
+  /* ---------- ambient layers ---------- */
+  .bg-grid{
+    background-image:none;
+  }
+  .bg-dots{
+    background-image:none;
+  }
+  .wash-hero{
+    background:
+      radial-gradient(760px 420px at 6% -8%,rgba(186,230,253,.85),transparent 64%),
+      radial-gradient(620px 380px at 98% 4%,rgba(254,205,211,.72),transparent 62%),
+      radial-gradient(700px 460px at 46% 116%,rgba(253,243,227,.95),transparent 64%);
+  }
+  .wash-dark{
+    background:
+      radial-gradient(700px 420px at 12% 0%,rgba(14,165,233,.28),transparent 62%),
+      radial-gradient(620px 420px at 92% 100%,rgba(244,63,94,.26),transparent 62%),
+      linear-gradient(160deg,#0b3a5c 0%,#082f49 48%,#1b1030 100%);
+  }
+
+  /* ---------- scroll progress ---------- */
+  #progressBar{
+    transform-origin:0 50%;
+    transform:scaleX(0);
+  }
+
+  /* ---------- nav ---------- */
+  .nav-link{position:relative;padding:.35rem 0;transition:color .25s ease}
+  .nav-link::after{
+    content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:99px;
+    background:var(--rose);transform:scaleX(0);transform-origin:left;
+    transition:transform .35s cubic-bezier(.22,1,.36,1);
+  }
+  .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1)}
+  .nav-link.active{color:var(--sky)}
+
+  /* ---------- rows ---------- */
+  .row-link{transition:background-color .35s ease,padding-left .35s cubic-bezier(.22,1,.36,1)}
+  .row-link:hover{background:linear-gradient(90deg,rgba(186,230,253,.42),rgba(255,253,249,0) 72%);padding-left:1.15rem}
+  .row-num{transition:color .3s ease,transform .45s cubic-bezier(.22,1,.36,1)}
+  .row-link:hover .row-num{color:var(--rose);transform:translateY(-3px) scale(1.06)}
+  .row-arrow{transition:transform .4s cubic-bezier(.22,1,.36,1),opacity .3s ease;opacity:.25}
+  .row-link:hover .row-arrow{transform:translateX(8px);opacity:1}
+
+  /* ---------- buttons ---------- */
+  .btn{transition:transform .2s ease,box-shadow .3s ease,background-color .3s ease,color .3s ease}
+  .btn:active{transform:scale(.96)}
+  .btn-primary{background:#0284c7;color:#fff;box-shadow:0 12px 30px -14px rgba(2,132,199,.85)}
+  .btn-primary:hover{background:#0369a1;box-shadow:0 18px 34px -14px rgba(2,132,199,.65);transform:translateY(-2px)}
+  .btn-primary:active{filter:brightness(.92)}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .75s ease,transform .75s cubic-bezier(.22,1,.36,1)}
+  .reveal.show{opacity:1;transform:none}
+  .mask-line{overflow:hidden;display:block;padding-bottom:.09em;margin-bottom:-.07em}
+  .mask-line>span{display:block;transform:translateY(125%);transition:transform .95s cubic-bezier(.22,1,.36,1)}
+  .mask-line.show>span{transform:none}
+
+  /* ---------- journey rail ---------- */
+  .rail{scroll-snap-type:x mandatory}
+  .rail>*{scroll-snap-align:start}
+  .rail::-webkit-scrollbar{height:6px}
+  .rail::-webkit-scrollbar-thumb{background:rgba(2,132,199,.3);border-radius:99px}
+
+  /* ---------- accordion ---------- */
+  details>summary{list-style:none;cursor:pointer}
+  details>summary::-webkit-details-marker{display:none}
+  .acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .52s cubic-bezier(.22,1,.36,1)}
+  details[open] .acc-body{grid-template-rows:1fr}
+  .acc-inner{overflow:hidden}
+  .acc-inner>p{opacity:0;transform:translateY(-6px);transition:opacity .35s ease,transform .5s cubic-bezier(.22,1,.36,1)}
+  details[open] .acc-inner>p{opacity:1;transform:none}
+  details[open] .acc-chev{transform:rotate(45deg)}
+  .acc-chev{transition:transform .4s cubic-bezier(.22,1,.36,1)}
+
+  /* ---------- svg illustration animation ---------- */
+  @keyframes fallIn{
+    0%{transform:translateY(-30px);opacity:0}
+    18%{opacity:1}
+    72%{opacity:1}
+    100%{transform:translateY(86px);opacity:0}
+  }
+  .lead-dot{animation:fallIn 3.1s cubic-bezier(.4,0,.7,1) infinite}
+  @keyframes growBar{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+  .bar{transform-box:fill-box;transform-origin:bottom;animation:growBar 3.8s ease-in-out infinite}
+  @keyframes drawLine{0%{stroke-dashoffset:300}42%,100%{stroke-dashoffset:0}}
+  .trend{stroke-dasharray:300;animation:drawLine 4.6s ease-in-out infinite}
+  @keyframes wavePulse{0%,100%{opacity:.15;transform:scale(.86)}50%{opacity:1;transform:scale(1.06)}}
+  .wave{transform-box:fill-box;transform-origin:left center;animation:wavePulse 2.6s ease-in-out infinite}
+  @keyframes typing{0%,60%,100%{transform:translateY(0);opacity:.35}30%{transform:translateY(-7px);opacity:1}}
+  .typing{animation:typing 1.7s ease-in-out infinite}
+  @keyframes spinSlow{to{transform:rotate(360deg)}}
+  .spin-slow{transform-box:fill-box;transform-origin:center;animation:spinSlow 72s linear infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .bob{animation:bob 6.5s ease-in-out infinite}
+  @keyframes coinDrop{0%,55%{transform:translateY(0);opacity:0}62%{opacity:1}100%{transform:translateY(34px);opacity:0}}
+  .coin{animation:coinDrop 3.1s ease-in infinite}
+  @keyframes digitPop{0%{transform:translateY(8px);opacity:.35}100%{transform:translateY(0);opacity:1}}
+  .digit-pop{animation:digitPop .45s cubic-bezier(.22,1,.36,1)}
+  .count-line{
+    background:linear-gradient(90deg,rgba(255,255,255,0),rgba(125,211,252,.45),rgba(255,255,255,0));
+    background-size:220% 100%;
+    animation:lineSweep 5s linear infinite;
+  }
+  @keyframes lineSweep{to{background-position:-220% 0}}
+
+  @media (prefers-reduced-motion: reduce){
+    .lead-dot,.bar,.trend,.wave,.typing,.spin-slow,.bob,.coin,.count-line{animation:none!important}
+    .reveal{opacity:1!important;transform:none!important}
+    .mask-line>span{transform:none!important}
+  }
+
+  ::selection{background:var(--sky-bright);color:#fff}
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- scroll progress -->
+<div id="progressBar" class="fixed left-0 top-0 z-[60] h-[3px] w-full bg-gradient-to-r from-sky-500 via-sky-400 to-rose-500"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header id="siteHeader" class="sticky top-0 z-50 w-full border-b border-sky-900/8 bg-[#fffdf9]/88 backdrop-blur-xl transition-shadow duration-300">
+  <div class="w-full px-5 sm:px-8 lg:px-12">
+    <div class="flex h-[68px] items-center justify-between gap-4 sm:h-20">
+
+      <a href="#beranda" class="group leading-none" aria-label="Kembali ke beranda KPOG">
+        <span class="font-display block text-2xl text-[#082f49] transition-colors group-hover:text-sky-700 sm:text-[28px]">KPOG</span>
+        <span class="mt-1 block text-[10px] font-extrabold uppercase tracking-[0.22em] text-sky-700/60">Bertemu · Belajar · Berpenghasilan</span>
+      </a>
+
+      <nav id="mainNav" class="hidden items-center gap-8 text-[13px] font-bold text-sky-900/70 lg:flex" aria-label="Navigasi utama">
+        <a href="#filosofi" class="nav-link hover:text-sky-700">Filosofi</a>
+        <a href="#pondasi" class="nav-link hover:text-sky-700">7 Pondasi</a>
+        <a href="#alur" class="nav-link hover:text-sky-700">Alur Beli</a>
+        <a href="#pemateri" class="nav-link hover:text-sky-700">Pemateri</a>
+        <a href="#lokasi" class="nav-link hover:text-sky-700">Waktu &amp; Tempat</a>
+        <a href="#investasi" class="nav-link hover:text-sky-700">Biaya</a>
+        <a href="#faq" class="nav-link hover:text-sky-700">FAQ</a>
+      </nav>
+
+      <button type="button" onclick="daftarWA()" class="btn btn-primary inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-[11px] font-black uppercase tracking-wider sm:px-6 sm:text-xs">
+        <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 016.988 2.896 9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.142 1.595 5.945L0 24l6.305-1.654a11.96 11.96 0 005.719 1.453h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+        Daftar
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="w-full">
+
+  <!-- ===================== HERO ===================== -->
+  <section id="beranda" class="wash-hero relative w-full overflow-hidden pb-0 pt-12 sm:pt-16 lg:pt-20">
+    <div class="bg-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -left-24 top-24 h-64 w-64 rounded-full bg-sky-300/30 blur-3xl bob" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-20 top-1/2 h-72 w-72 rounded-full bg-rose-300/25 blur-3xl bob" style="animation-delay:-3s" aria-hidden="true"></div>
+
+    <div class="relative w-full px-5 sm:px-8 lg:px-12">
+      <div class="grid w-full items-center gap-12 md:grid-cols-12 md:gap-8 lg:gap-10">
+
+        <!-- copy -->
+        <div class="md:col-span-7 lg:col-span-7">
+          <p class="text-[10px] font-black uppercase tracking-[0.24em] text-sky-700 sm:text-xs">Kopdar Batch 5</p>
+
+          <h1 class="font-display mt-6 text-[clamp(2.6rem,8.4vw,6.4rem)] text-[#082f49]">
+            <span class="mask-line reveal-line"><span>7 PONDASI</span></span>
+            <span class="mask-line reveal-line"><span class="text-sky-600" style="transition-delay:.12s">JUALAN</span></span>
+            <span class="mask-line reveal-line"><span style="transition-delay:.24s">ONLINE</span></span>
+          </h1>
+
+          <p class="mt-7 max-w-[62ch] text-sm font-semibold leading-relaxed text-sky-900/80 sm:text-lg">
+            Bangun pondasi jualan yang kuat, supaya kita tidak sekadar sibuk jualan, tapi benar-benar paham apa yang sedang kita bangun. Dari <em class="not-italic font-extrabold text-sky-700">kenal</em>, <em class="not-italic font-extrabold text-sky-700">beli</em>, <em class="not-italic font-extrabold text-sky-700">balik lagi</em>, sampai <em class="not-italic font-extrabold text-rose-600">merekomendasikan</em>.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <button type="button" onclick="daftarWA()" class="btn btn-primary inline-flex items-center justify-center gap-2.5 rounded-full px-8 py-4 text-sm font-black">
+              Amankan Kursi Saya
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="#pondasi" class="btn inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-sky-900/12 px-8 py-4 text-sm font-extrabold text-sky-900 hover:border-sky-600/40 hover:bg-white">
+              <svg class="h-4 w-4 text-rose-500" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              Pelajari 7 Pondasi
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 divide-y divide-sky-900/10 border-y border-sky-900/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <p class="flex items-end justify-between py-4 sm:flex-col sm:items-start sm:gap-1 sm:px-4 sm:first:pl-0">
+              <span class="font-display text-4xl leading-none text-rose-600 sm:text-3xl">Praktisi Sejak</span>
+              <span class="text-[10px] font-black uppercase tracking-[0.18em] text-sky-900/55">2015</span>
+            </p>
+            <p class="flex items-end justify-between py-4 sm:flex-col sm:items-start sm:gap-1 sm:px-4">
+              <span class="font-display text-4xl leading-none text-sky-700 sm:text-3xl">Ratusan</span>
+              <span class="text-[10px] font-black uppercase tracking-[0.18em] text-sky-900/55">Alumni Belajar</span>
+            </p>
+            <p class="flex items-end justify-between py-4 sm:flex-col sm:items-start sm:gap-1 sm:px-4 sm:last:pr-0">
+              <span class="font-display text-4xl leading-none text-sky-700 sm:text-3xl" data-count="50" data-suffix=" kursi">0</span>
+              <span class="text-[10px] font-black uppercase tracking-[0.18em] text-sky-900/55">Kuota Batch 5</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- DIGITAL MARKETING SVG -->
+        <figure class="w-full md:col-span-5 lg:col-span-5 lg:scale-110 lg:origin-left" aria-label="Ilustrasi digital marketing modern: creator sedang broadcast dengan ikon media sosial dan panel performa">
+          <svg viewBox="0 0 560 500" class="h-auto w-full" role="img">
+            <defs>
+              <linearGradient id="panelBase" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="100%" stop-color="#f0f9ff"/>
+              </linearGradient>
+              <linearGradient id="blueGlow" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#0ea5e9"/>
+                <stop offset="100%" stop-color="#2563eb"/>
+              </linearGradient>
+              <linearGradient id="roseGlow" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fb7185"/>
+                <stop offset="100%" stop-color="#e11d48"/>
+              </linearGradient>
+            </defs>
+
+            <!-- canvas -->
+            <rect x="34" y="24" width="492" height="452" rx="34" fill="url(#panelBase)"/>
+
+            <!-- phone live card -->
+            <g class="bob" style="animation-delay:-.8s">
+              <rect x="72" y="94" width="206" height="356" rx="34" fill="#082f49"/>
+              <rect x="84" y="118" width="182" height="308" rx="24" fill="#f8fafc"/>
+              <rect x="96" y="132" width="158" height="40" rx="12" fill="url(#blueGlow)"/>
+              <circle cx="116" cy="152" r="7" fill="#fff"/>
+              <rect x="130" y="146" width="80" height="10" rx="5" fill="#dbeafe"/>
+              <rect x="218" y="142" width="28" height="18" rx="9" fill="#fecdd3"/>
+
+              <!-- person broadcasting -->
+              <circle cx="176" cy="228" r="28" fill="#fde68a"/>
+              <path d="M134 310c5-43 23-63 42-63s37 20 42 63" fill="#0ea5e9"/>
+              <rect x="152" y="246" width="48" height="12" rx="6" fill="#082f49"/>
+              <path d="M212 220l26-10v32l-26-10z" fill="url(#roseGlow)"/>
+              <path d="M242 212c10 6 10 22 0 28" stroke="#f43f5e" stroke-width="4" fill="none" stroke-linecap="round" class="wave"/>
+              <path d="M250 205c16 10 16 36 0 46" stroke="#fda4af" stroke-width="4" fill="none" stroke-linecap="round" class="wave" style="animation-delay:-.5s"/>
+
+              <rect x="102" y="334" width="146" height="72" rx="14" fill="#fff" stroke="#e2e8f0"/>
+              <path d="M122 360h98M122 378h74" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="124" cy="346" r="7" fill="#0ea5e9" class="typing"/>
+              <circle cx="146" cy="346" r="7" fill="#38bdf8" class="typing" style="animation-delay:-.2s"/>
+              <circle cx="168" cy="346" r="7" fill="#f43f5e" class="typing" style="animation-delay:-.4s"/>
+            </g>
+
+            <!-- social icons cloud -->
+            <g class="spin-slow" opacity=".9">
+              <circle cx="360" cy="106" r="26" fill="#ffffff" stroke="#dbeafe"/>
+              <path d="M350 107h20M360 97v20" stroke="#0ea5e9" stroke-width="4" stroke-linecap="round"/>
+            </g>
+
+            <g class="bob" style="animation-delay:-1.2s">
+              <circle cx="438" cy="120" r="24" fill="#ffffff" stroke="#dbeafe"/>
+              <rect x="425" y="108" width="26" height="24" rx="7" fill="url(#roseGlow)"/>
+              <circle cx="438" cy="120" r="6" fill="none" stroke="#fff" stroke-width="2"/>
+              <circle cx="446" cy="112" r="2" fill="#fff"/>
+            </g>
+
+            <g class="bob" style="animation-delay:-2s">
+              <circle cx="490" cy="176" r="24" fill="#ffffff" stroke="#dbeafe"/>
+              <rect x="478" y="164" width="24" height="24" rx="6" fill="#ef4444"/>
+              <path d="M486 170l10 6-10 6z" fill="#fff"/>
+            </g>
+
+            <g class="bob" style="animation-delay:-2.6s">
+              <circle cx="356" cy="176" r="24" fill="#ffffff" stroke="#dbeafe"/>
+              <rect x="344" y="164" width="24" height="24" rx="6" fill="#0ea5e9"/>
+              <path d="M350 172h12M350 180h12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+
+            <g class="bob" style="animation-delay:-3.1s">
+              <circle cx="442" cy="230" r="24" fill="#ffffff" stroke="#dbeafe"/>
+              <rect x="430" y="218" width="24" height="24" rx="6" fill="#22c55e"/>
+              <path d="M436 230h12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              <path d="M436 225h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <!-- analytics and growth -->
+            <rect x="312" y="272" width="184" height="88" rx="18" fill="#ffffff" stroke="#dbeafe"/>
+            <rect x="330" y="325" width="14" height="20" rx="6" fill="#7dd3fc" class="bar"/>
+            <rect x="352" y="314" width="14" height="31" rx="6" fill="#38bdf8" class="bar" style="animation-delay:-.15s"/>
+            <rect x="374" y="302" width="14" height="43" rx="6" fill="#0ea5e9" class="bar" style="animation-delay:-.3s"/>
+            <rect x="396" y="288" width="14" height="57" rx="6" fill="#0284c7" class="bar" style="animation-delay:-.45s"/>
+            <rect x="418" y="278" width="14" height="67" rx="6" fill="#ec4899" class="bar" style="animation-delay:-.6s"/>
+            <rect x="440" y="266" width="14" height="79" rx="6" fill="url(#roseGlow)" class="bar" style="animation-delay:-.75s"/>
+
+            <rect x="312" y="376" width="184" height="56" rx="16" fill="#082f49"/>
+            <path d="M332 405h94" stroke="#7dd3fc" stroke-width="7" stroke-linecap="round"/>
+            <path d="M332 419h66" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="462" cy="404" r="13" fill="url(#roseGlow)" class="coin"/>
+          </svg>
+        </figure>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== FILOSOFI ===================== -->
+  <section id="filosofi" class="relative w-full overflow-hidden bg-[#fffdf9] py-20 sm:py-28">
+    <div class="bg-dots pointer-events-none absolute inset-0 opacity-40" aria-hidden="true"></div>
+
+    <div class="relative w-full px-5 sm:px-8 lg:px-12">
+      <div class="grid w-full gap-12 lg:grid-cols-12 lg:gap-16">
+
+        <div class="lg:col-span-5">
+          <p class="reveal text-[10px] font-black uppercase tracking-[0.26em] text-rose-600">Mindset Dasar</p>
+          <h2 class="font-display reveal mt-5 text-[clamp(2rem,4.6vw,3.6rem)] text-[#082f49]">
+            Jualan itu <span class="text-sky-600">menolong</span> orang, yang dibayar.
+          </h2>
+          <p class="reveal mt-6 text-sm leading-relaxed text-sky-900/75 sm:text-base">
+            Jangan pernah minder atau malu saat berjualan. Kita bukan sedang meminta-minta, melainkan menawarkan solusi nyata atas kebutuhan orang lain dengan cara yang jujur dan amanah.
+          </p>
+          <blockquote class="reveal mt-8 border-l-4 border-rose-500 pl-5 text-base font-bold italic leading-relaxed text-sky-900 sm:text-lg">
+            "Produk boleh sama, tapi kenyamanan hubungan yang menentukan pilihan."
+          </blockquote>
+        </div>
+
+        <div class="lg:col-span-7">
+          <p class="reveal text-[10px] font-black uppercase tracking-[0.26em] text-sky-700">Tiga Jebakan yang Paling Sering Terjadi</p>
+          <ul class="mt-6 w-full">
+            <li class="row-link reveal group flex w-full items-start gap-6 border-b border-sky-900/10 py-7">
+              <span class="row-num font-display shrink-0 text-4xl text-sky-300 sm:text-5xl">01</span>
+              <span class="min-w-0 flex-1">
+                <strong class="block text-base font-black text-[#082f49] sm:text-xl">Kehilangan arah &amp; gampang menyerah</strong>
+                <span class="mt-2 block text-sm leading-relaxed text-sky-900/70">Tidak punya <em class="font-extrabold not-italic text-sky-700">strong why</em>. Saat jualan sepi, penolakan datang, atau capek bikin konten, semangat langsung redup karena orientasinya hanya uang semata.</span>
+              </span>
+            </li>
+            <li class="row-link reveal group flex w-full items-start gap-6 border-b border-sky-900/10 py-7">
+              <span class="row-num font-display shrink-0 text-4xl text-sky-300 sm:text-5xl">02</span>
+              <span class="min-w-0 flex-1">
+                <strong class="block text-base font-black text-[#082f49] sm:text-xl">Menjual ke semua orang tanpa pembeda</strong>
+                <span class="mt-2 block text-sm leading-relaxed text-sky-900/70">Belum benar-benar mengenal keunggulan produk sendiri dan menganggap semua orang adalah pembeli. Akibatnya penawaran terasa hambar, tidak menyentuh kebutuhan spesifik calon konsumen.</span>
+              </span>
+            </li>
+            <li class="row-link reveal group flex w-full items-start gap-6 border-b border-sky-900/10 py-7">
+              <span class="row-num font-display shrink-0 text-4xl text-sky-300 sm:text-5xl">03</span>
+              <span class="min-w-0 flex-1">
+                <strong class="block text-base font-black text-[#082f49] sm:text-xl">Beli sekali lalu hilang (ghosting)</strong>
+                <span class="mt-2 block text-sm leading-relaxed text-sky-900/70">Setelah pembeli transfer dan produk dikirim, interaksi terputus. Tidak ada sistem follow up terarah, database kontak terbengkalai, dan repeat order tidak pernah terjadi.</span>
+              </span>
+            </li>
+          </ul>
+
+          <div class="reveal mt-10 flex flex-col items-start gap-5 border-2 border-dashed border-sky-600/25 p-7 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-sm font-extrabold leading-relaxed text-sky-900 sm:max-w-[46ch]">
+              Perbaiki pondasinya: dari <span class="text-sky-600">kenal</span> → <span class="text-sky-600">beli</span> → <span class="text-sky-600">balik lagi</span> → <span class="text-rose-600">rekomendasi</span>.
+            </p>
+            <button type="button" onclick="daftarWA()" class="btn btn-primary shrink-0 rounded-full px-7 py-3.5 text-xs font-black uppercase tracking-wider">
+              Ikut Kopdar
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 7 PONDASI ===================== -->
+  <section id="pondasi" class="wash-dark relative w-full overflow-hidden py-20 text-white sm:py-28">
+    <div class="bg-grid pointer-events-none absolute inset-0 opacity-[0.18]" aria-hidden="true"></div>
+
+    <div class="relative w-full px-5 sm:px-8 lg:px-12">
+      <div class="flex w-full flex-col gap-6 border-b border-white/12 pb-10 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="reveal text-[10px] font-black uppercase tracking-[0.26em] text-sky-300">Kurikulum Utama</p>
+          <h2 class="font-display reveal mt-4 text-[clamp(2.1rem,5.4vw,4.2rem)]">
+            7 Pondasi yang<br>Akan Anda Kuasai
+          </h2>
+        </div>
+        <p class="reveal max-w-[46ch] text-sm leading-relaxed text-sky-100/70">
+          Struktur materi praktis yang disusun dari pengalaman lapangan nyata sejak 2015, bukan teori, tapi urutan kerja yang bisa langsung dieksekusi.
+        </p>
+      </div>
+
+      <ol class="w-full" aria-label="Daftar tujuh pondasi jualan online">
+        <li class="reveal group grid w-full items-start gap-x-8 gap-y-3 border-b border-white/12 py-8 transition-colors duration-300 hover:bg-white/[0.04] sm:grid-cols-[auto_1fr_auto] lg:py-9">
+          <span class="font-display w-[86px] shrink-0 text-5xl text-sky-400/45 transition-colors duration-300 group-hover:text-rose-400 sm:text-6xl">01</span>
+          <span class="min-w-0">
+            <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-sky-300/80">Pondasi Pertama</span>
+            <strong class="font-display mt-2 block text-2xl sm:text-[2rem]">Temukan Strong Why</strong>
+            <span class="mt-3 block max-w-[70ch] text-sm leading-relaxed text-sky-100/70">Bukan sekadar ingin punya uang, melainkan memperjelas <em class="not-italic font-extrabold text-white">untuk siapa</em> dan <em class="not-italic font-extrabold text-white">untuk apa</em>. Menanamkan alasan mendalam agar tetap tangguh saat jualan sedang sepi.</span>
+            <span class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-bold text-sky-200/70">
+              <span>· Refleksi tujuan finansial &amp; keluarga</span>
+              <span>· Energi ikhtiar tanpa batas</span>
+            </span>
+          </span>
+          <svg class="row-arrow hidden h-6 w-6 text-rose-300 sm:block" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </li>
+
+        <li class="reveal group grid w-full items-start gap-x-8 gap-y-3 border-b border-white/12 py-8 transition-colors duration-300 hover:bg-white/[0.04] sm:grid-cols-[auto_1fr_auto] lg:py-9">
+          <span class="font-display w-[86px] shrink-0 text-5xl text-sky-400/45 transition-colors duration-300 group-hover:text-rose-400 sm:text-6xl">02</span>
+          <span class="min-w-0">
+            <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-sky-300/80">Pondasi Kedua</span>
+            <strong class="font-display mt-2 block text-2xl sm:text-[2rem]">Kenali Produk Jualanmu</strong>
+            <span class="mt-3 block max-w-[70ch] text-sm leading-relaxed text-sky-100/70">Bedah 5 hal penting: produknya apa, masalah apa yang diselesaikan, manfaat utamanya, apa pembedanya, dan bukti otentik yang membuat calon pembeli percaya.</span>
+            <span class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-bold text-sky-200/70">
+              <span>· Latihan menyusun 1 kalimat penjelas produk</span>
+              <span>· Klaim membuat tahu, bukti membuat percaya</span>
+            </span>
+          </span>
+          <svg class="row-arrow hidden h-6 w-6 text-rose-300 sm:block" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </li>
+
+        <li class="reveal group grid w-full items-start gap-x-8 gap-y-3 border-b border-white/12 py-8 transition-colors duration-300 hover:bg-white/[0.04] sm:grid-cols-[auto_1fr_auto] lg:py-9">
+          <span class="font-display w-[86px] shrink-0 text-5xl text-sky-400/45 transition-colors duration-300 group-hover:text-rose-400 sm:text-6xl">03</span>
+          <span class="min-w-0">
+            <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-sky-300/80">Pondasi Ketiga</span>
+            <strong class="font-display mt-2 block text-2xl sm:text-[2rem]">Kenali Calon Pembelimu</strong>
+            <span class="mt-3 block max-w-[70ch] text-sm leading-relaxed text-sky-100/70">Berhenti menjual ke semua orang. Identifikasi siapa mereka, di mana mereka berkumpul (online maupun offline), masalah yang dirasakan, serta pemicu utama yang mendorong mereka segera membeli.</span>
+            <span class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-bold text-sky-200/70">
+              <span>· Menemukan profil pembeli ideal</span>
+              <span>· Orang membeli solusi, bukan sekadar barang</span>
+            </span>
+          </span>
+          <svg class="row-arrow hidden h-6 w-6 text-rose-300 sm:block" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </li>
+
+        <li class="reveal group grid w-full items-start gap-x-8 gap-y-3 border-b border-white/12 py-8 transition-colors duration-300 hover:bg-white/[0.04] sm:grid-cols-[auto_1fr_auto] lg:py-9">
+          <span class="font-display w-[86px] shrink-0 text-5xl text-sky-400/45 transition-colors duration-300 group-hover:text-rose-400 sm:text-6xl">04</span>
+          <span class="min-w-0">
+            <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-sky-300/80">Pondasi Keempat</span>
+            <strong class="font-display mt-2 block text-2xl sm:text-[2rem]">Pahami Alur Perjalanan Pembeli</strong>
+            <span class="mt-3 block max-w-[70ch] text-sm leading-relaxed text-sky-100/70">Kuasai customer journey bertahap: tidak tahu &amp; tidak percaya → tahu &amp; percaya → tertarik &amp; yakin → closing → repeat order → sukarela merekomendasikan.</span>
+            <span class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-bold text-sky-200/70">
+              <span>· Tiap tahapan butuh cara jualan berbeda</span>
+              <span>· Strategi memindahkan calon pembeli antar tahap</span>
+            </span>
+          </span>
+          <svg class="row-arrow hidden h-6 w-6 text-rose-300 sm:block" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </li>
+
+        <li class="reveal group grid w-full items-start gap-x-8 gap-y-3 border-b border-white/12 py-8 transition-colors duration-300 hover:bg-white/[0.04] sm:grid-cols-[auto_1fr_auto] lg:py-9">
+          <span class="font-display w-[86px] shrink-0 text-5xl text-sky-400/45 transition-colors duration-300 group-hover:text-rose-400 sm:text-6xl">05</span>
+          <span class="min-w-0">
+            <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-sky-300/80">Pondasi Kelima</span>
+            <strong class="font-display mt-2 block text-2xl sm:text-[2rem]">Ikhtiar Maksimal Cara Jualanmu</strong>
+            <span class="mt-3 block max-w-[70ch] text-sm leading-relaxed text-sky-100/70">Jangan menggantungkan nasib jualan pada satu jalur saja. Bedakan cara offline vs online, organik vs berbayar, lalu pilih yang paling tepat untuk dieksekusi secara konsisten.</span>
+            <span class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-bold text-sky-200/70">
+              <span>· Peta saluran online gratis &amp; berbayar</span>
+              <span>· Fokus pada saluran yang cocok untuk produk Anda</span>
+            </span>
+          </span>
+          <svg class="row-arrow hidden h-6 w-6 text-rose-300 sm:block" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </li>
+
+        <li class="reveal group grid w-full items-start gap-x-8 gap-y-3 border-b border-white/12 py-8 transition-colors duration-300 hover:bg-white/[0.04] sm:grid-cols-[auto_1fr_auto] lg:py-9">
+          <span class="font-display w-[86px] shrink-0 text-5xl text-sky-400/45 transition-colors duration-300 group-hover:text-rose-400 sm:text-6xl">06</span>
+          <span class="min-w-0">
+            <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-sky-300/80">Pondasi Keenam</span>
+            <strong class="font-display mt-2 block text-2xl sm:text-[2rem]">Kuasai 4 Pilar Skill Jualan</strong>
+            <span class="mt-3 block max-w-[70ch] text-sm leading-relaxed text-sky-100/70">Senjata praktis: <strong class="text-white">Ngonten</strong> (copywriting, foto, video CapCut, carousel, voice over), <strong class="text-white">Personal Branding</strong>, <strong class="text-white">Optimasi AI ChatGPT</strong>, dan <strong class="text-white">Jago Chat Closing WA</strong>.</span>
+            <span class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-bold text-sky-200/70">
+              <span>· Rumus copywriting: Hook, Story, Penawaran, CTA</span>
+              <span>· AI sebagai asisten ide &amp; copywriting</span>
+            </span>
+          </span>
+          <svg class="row-arrow hidden h-6 w-6 text-rose-300 sm:block" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </li>
+
+        <li class="reveal group grid w-full items-start gap-x-8 gap-y-3 py-8 transition-colors duration-300 hover:bg-white/[0.04] sm:grid-cols-[auto_1fr_auto] lg:py-9">
+          <span class="font-display w-[86px] shrink-0 text-5xl text-rose-400/70 transition-colors duration-300 group-hover:text-rose-300 sm:text-6xl">07</span>
+          <span class="min-w-0">
+            <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rose-300">Pondasi Ketujuh</span>
+            <strong class="font-display mt-2 block text-2xl sm:text-[2rem]">Seni Follow Up &amp; Rekomendasi</strong>
+            <span class="mt-3 block max-w-[70ch] text-sm leading-relaxed text-sky-100/70">Bangun hubungan jangka panjang pasca-transaksi: merawat database kontak, etika follow up yang manusiawi, kartu order loyalitas, hingga memicu pembeli setia menjadi promotor sukarela.</span>
+            <span class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-bold text-sky-200/70">
+              <span>· Follow up terarah ke calon &amp; pembeli lama</span>
+              <span>· Memicu repeat order &amp; word of mouth</span>
+            </span>
+          </span>
+          <svg class="row-arrow hidden h-6 w-6 text-rose-300 sm:block" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== ALUR BELI ===================== -->
+  <section id="alur" class="relative w-full overflow-hidden bg-[#fffdf9] py-20 sm:py-28">
+    <div class="w-full px-5 sm:px-8 lg:px-12">
+      <div class="flex w-full flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="reveal text-[10px] font-black uppercase tracking-[0.26em] text-rose-600">Customer Journey</p>
+          <h2 class="font-display reveal mt-4 text-[clamp(2rem,5vw,3.8rem)] text-[#082f49]">Alur seseorang<br>memutuskan membeli</h2>
+        </div>
+        <p class="reveal max-w-[44ch] text-sm leading-relaxed text-sky-900/70">
+          Calon pembeli punya perjalanannya sendiri. Pahami apa tugas Anda di setiap fasenya, geser untuk melihat alurnya.
+        </p>
+      </div>
+    </div>
+
+    <ol class="rail reveal mt-12 flex w-full snap-x gap-0 overflow-x-auto border-y border-sky-900/10 lg:grid lg:grid-cols-5 lg:overflow-visible" aria-label="Lima tahap perjalanan pembeli">
+      <li class="group w-[78vw] shrink-0 border-r border-sky-900/10 p-7 transition-colors duration-300 hover:bg-sky-50 sm:w-[46vw] lg:w-full lg:shrink lg:border-b-0">
+        <span class="font-display block text-4xl text-sky-300 transition-colors duration-300 group-hover:text-sky-600">01</span>
+        <strong class="mt-4 block text-base font-black text-[#082f49]">Tidak tahu &amp; tidak percaya</strong>
+        <span class="mt-2 block text-xs leading-relaxed text-sky-900/70"><em class="not-italic font-black text-sky-700">Tugas penjual:</em> bikin mereka melirik, mengenal siapa Anda, dan mulai percaya lewat konten yang relevan.</span>
+        <span class="mt-5 block text-[10px] font-black uppercase tracking-[0.18em] text-rose-600">Brand Awareness</span>
+      </li>
+      <li class="group w-[78vw] shrink-0 border-r border-sky-900/10 p-7 transition-colors duration-300 hover:bg-sky-50 sm:w-[46vw] lg:w-full lg:shrink lg:border-b-0">
+        <span class="font-display block text-4xl text-sky-300 transition-colors duration-300 group-hover:text-sky-600">02</span>
+        <strong class="mt-4 block text-base font-black text-[#082f49]">Tahu &amp; percaya</strong>
+        <span class="mt-2 block text-xs leading-relaxed text-sky-900/70"><em class="not-italic font-black text-sky-700">Tugas penjual:</em> giring mereka menghubungi WhatsApp Anda lewat penawaran atau edukasi yang memicu rasa ingin tahu.</span>
+        <span class="mt-5 block text-[10px] font-black uppercase tracking-[0.18em] text-rose-600">Lead Masuk WA</span>
+      </li>
+      <li class="group w-[78vw] shrink-0 border-r border-sky-900/10 p-7 transition-colors duration-300 hover:bg-sky-50 sm:w-[46vw] lg:w-full lg:shrink lg:border-b-0">
+        <span class="font-display block text-4xl text-sky-300 transition-colors duration-300 group-hover:text-sky-600">03</span>
+        <strong class="mt-4 block text-base font-black text-[#082f49]">Tertarik &amp; yakin</strong>
+        <span class="mt-2 block text-xs leading-relaxed text-sky-900/70"><em class="not-italic font-black text-sky-700">Tugas penjual:</em> bantu mereka mengambil keputusan lewat keramahan chat, jawaban informatif, dan teknik closing.</span>
+        <span class="mt-5 block text-[10px] font-black uppercase tracking-[0.18em] text-rose-600">Closing &amp; Beli</span>
+      </li>
+      <li class="group w-[78vw] shrink-0 border-r border-sky-900/10 p-7 transition-colors duration-300 hover:bg-sky-50 sm:w-[46vw] lg:w-full lg:shrink lg:border-b-0">
+        <span class="font-display block text-4xl text-sky-300 transition-colors duration-300 group-hover:text-sky-600">04</span>
+        <strong class="mt-4 block text-base font-black text-[#082f49]">Membeli &amp; puas</strong>
+        <span class="mt-2 block text-xs leading-relaxed text-sky-900/70"><em class="not-italic font-black text-sky-700">Tugas penjual:</em> rawat hubungan dengan follow up kepuasan, pastikan barang diterima baik, hadirkan program loyalitas.</span>
+        <span class="mt-5 block text-[10px] font-black uppercase tracking-[0.18em] text-rose-600">Repeat Order</span>
+      </li>
+      <li class="group w-[78vw] shrink-0 bg-[#082f49] p-7 text-white transition-colors duration-300 hover:bg-sky-800 sm:w-[46vw] lg:w-full lg:shrink">
+        <span class="font-display block text-4xl text-rose-400">05</span>
+        <strong class="mt-4 block text-base font-black">Beli lagi &amp; loyal</strong>
+        <span class="mt-2 block text-xs leading-relaxed text-sky-100/75"><em class="not-italic font-black text-white">Tugas penjual:</em> buat program spesial agar mereka jadi "tim marketing gratis" yang bangga merekomendasikan produk Anda.</span>
+        <span class="mt-5 block text-[10px] font-black uppercase tracking-[0.18em] text-rose-300">Rekomendasi Sukarela</span>
+      </li>
+    </ol>
+
+    <div class="w-full px-5 sm:px-8 lg:px-12">
+      <p class="reveal mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-black uppercase tracking-[0.14em] text-sky-900 sm:text-sm">
+        <span class="text-rose-600">Rumus:</span>
+        <span>Kenal</span><span class="text-sky-300">→</span>
+        <span>Percaya</span><span class="text-sky-300">→</span>
+        <span>Dekat</span><span class="text-sky-300">→</span>
+        <span>Beli</span><span class="text-sky-300">→</span>
+        <span>Balik Lagi</span><span class="text-sky-300">→</span>
+        <span class="text-rose-600">Rekomendasi</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== PEMATERI ===================== -->
+  <section id="pemateri" class="relative w-full overflow-hidden bg-[#fefaf2] py-20 sm:py-28">
+    <div class="bg-dots pointer-events-none absolute inset-0 opacity-50" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-28 -right-20 h-80 w-80 rounded-full bg-sky-200/40 blur-3xl bob" aria-hidden="true"></div>
+
+    <div class="relative w-full px-5 sm:px-8 lg:px-12">
+      <div class="grid w-full gap-14 lg:grid-cols-12 lg:gap-16">
+
+        <div class="lg:col-span-5">
+          <p class="reveal text-[10px] font-black uppercase tracking-[0.26em] text-rose-600">Pemateri &amp; Penulis Modul</p>
+          <h2 class="font-display reveal mt-4 text-[clamp(2.4rem,6vw,4.4rem)] text-[#082f49]">Bundadari<br>Ainun</h2>
+          <p class="reveal mt-5 text-sm font-bold text-sky-700">Founder KPOG · Educator LYNK · Praktisi sejak 2015</p>
+
+          <dl class="reveal mt-9 grid w-full grid-cols-3 divide-x divide-sky-900/10 border-y border-sky-900/10 py-6">
+            <div class="px-3 first:pl-0">
+              <dt class="text-[9px] font-black uppercase tracking-[0.16em] text-sky-900/50">Praktisi Sejak</dt>
+              <dd class="font-display mt-1 text-2xl text-sky-700" data-count="2015" data-plain="true">0</dd>
+            </div>
+            <div class="px-3">
+              <dt class="text-[9px] font-black uppercase tracking-[0.16em] text-sky-900/50">Alumni Belajar</dt>
+              <dd class="font-display mt-1 text-2xl text-rose-600" data-count="1000" data-suffix="+">0</dd>
+            </div>
+            <div class="px-3">
+              <dt class="text-[9px] font-black uppercase tracking-[0.16em] text-sky-900/50">Basis Komunitas</dt>
+              <dd class="font-display mt-1 text-2xl text-sky-700">Gorontalo</dd>
+            </div>
+          </dl>
+
+          <p class="reveal mt-7 inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.16em] text-sky-900/70">
+            <svg class="h-4 w-4 text-rose-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Founder Resmi KPOG Gorontalo
+          </p>
+        </div>
+
+        <div class="lg:col-span-7">
+          <h3 class="reveal font-display text-[clamp(1.5rem,3vw,2.4rem)] leading-tight text-[#082f49]">
+            Belajar langsung dari pelaku yang menjalani prosesnya, bukan sekadar penyampai teori.
+          </h3>
+          <p class="reveal mt-6 text-sm leading-relaxed text-sky-900/75 sm:text-base">
+            Penulis panduan praktis <em class="font-extrabold not-italic text-sky-700">"7 Pondasi Jualan Online: Dari Kenal, Beli, Balik Lagi, Rekomendasi"</em>. Dikenal luas membimbing ratusan pelaku UMKM, pedagang rumahan, serta reseller untuk membangun bisnis online berpondasi kuat dan beromset nyata.
+          </p>
+
+          <ul class="mt-10 w-full">
+            <li class="reveal flex w-full items-start gap-5 border-t border-sky-900/10 py-6">
+              <svg class="mt-1 h-5 w-5 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/></svg>
+              <span><strong class="block text-sm font-black text-[#082f49] sm:text-base">Founder &amp; Mentor KPOG</strong><span class="mt-1 block text-xs leading-relaxed text-sky-900/70 sm:text-sm">Membangun wadah belajar dan silaturahmi bagi penjual online di Gorontalo.</span></span>
+            </li>
+            <li class="reveal flex w-full items-start gap-5 border-t border-sky-900/10 py-6">
+              <svg class="mt-1 h-5 w-5 shrink-0 text-rose-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5"/></svg>
+              <span><strong class="block text-sm font-black text-[#082f49] sm:text-base">Educator LYNK</strong><span class="mt-1 block text-xs leading-relaxed text-sky-900/70 sm:text-sm">Menyusun framework digital marketing dan panduan jualan siap eksekusi.</span></span>
+            </li>
+            <li class="reveal flex w-full items-start gap-5 border-t border-sky-900/10 py-6">
+              <svg class="mt-1 h-5 w-5 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              <span><strong class="block text-sm font-black text-[#082f49] sm:text-base">Promotor Usaha Lokal</strong><span class="mt-1 block text-xs leading-relaxed text-sky-900/70 sm:text-sm">Mendorong produk unggulan daerah agar naik kelas dan dikenal lebih luas.</span></span>
+            </li>
+            <li class="reveal flex w-full items-start gap-5 border-y border-sky-900/10 py-6">
+              <svg class="mt-1 h-5 w-5 shrink-0 text-rose-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span><strong class="block text-sm font-black text-[#082f49] sm:text-base">Teruji Lewat Pasang-Surut 10 Tahun</strong><span class="mt-1 block text-xs leading-relaxed text-sky-900/70 sm:text-sm">Materi lahir dari praktik langsung, bukan dari slide yang belum pernah dijalankan.</span></span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WAKTU & TEMPAT ===================== -->
+  <section id="lokasi" class="relative w-full overflow-hidden bg-[#fffdf9] py-20 sm:py-28">
+    <div class="w-full px-5 sm:px-8 lg:px-12">
+      <div class="flex w-full flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="reveal text-[10px] font-black uppercase tracking-[0.26em] text-sky-700">Detail Acara</p>
+          <h2 class="font-display reveal mt-4 text-[clamp(2rem,5vw,3.8rem)] text-[#082f49]">Informasi lengkap acara</h2>
+        </div>
+        <p class="reveal max-w-[42ch] text-sm leading-relaxed text-sky-900/70">
+          Luangkan satu hari penuh untuk belajar, bertemu, berbagi pengalaman, dan memperkuat pondasi jualan bersama.
+        </p>
+      </div>
+
+      <dl class="reveal mt-14 grid w-full grid-cols-1 divide-y divide-sky-900/10 border-y border-sky-900/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+        <div class="group py-8 sm:px-8 sm:first:pl-0">
+          <dt class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-rose-600">
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Hari &amp; Tanggal
+          </dt>
+          <dd class="font-display mt-4 text-2xl text-[#082f49] sm:text-[2rem]">Ahad, 04 Oktober 2026</dd>
+          <dd class="mt-3 text-xs leading-relaxed text-sky-900/70 sm:text-sm">Registrasi ulang dibuka pukul 09.30 WITA di meja panitia.</dd>
+        </div>
+        <div class="group py-8 sm:px-8">
+          <dt class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-rose-600">
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Waktu Pelaksanaan
+          </dt>
+          <dd class="font-display mt-4 text-2xl text-[#082f49] sm:text-[2rem]">10.00 sampai 17.00 WITA</dd>
+          <dd class="mt-3 text-xs leading-relaxed text-sky-900/70 sm:text-sm">Sesi materi 7 pondasi, bedah produk &amp; copywriting, plus tanya jawab.</dd>
+        </div>
+        <div class="group py-8 sm:px-8 sm:last:pr-0">
+          <dt class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-rose-600">
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Lokasi Acara
+          </dt>
+          <dd class="font-display mt-4 text-2xl text-[#082f49] sm:text-[2rem]">Grand Ballroom Eljie Hotel</dd>
+          <dd class="mt-3 text-xs leading-relaxed text-sky-900/70 sm:text-sm">Jalan Jenderal Sudirman, Kota Gorontalo, Gorontalo.</dd>
+        </div>
+      </dl>
+
+      <div class="mt-14">
+        <p class="reveal flex flex-wrap items-center gap-3 text-[10px] font-black uppercase tracking-[0.26em] text-sky-700">
+          <svg class="h-4 w-4 text-rose-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+          Fasilitas Peserta
+        </p>
+        <ul class="reveal mt-6 grid w-full grid-cols-1 gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="flex items-start gap-3 border-b border-sky-900/10 py-4 text-sm font-bold text-sky-900"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-sky-500"></span>Ballroom hotel ber-AC</li>
+          <li class="flex items-start gap-3 border-b border-sky-900/10 py-4 text-sm font-bold text-sky-900"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-rose-500"></span>Networking member KPOG</li>
+          <li class="flex items-start gap-3 border-b border-sky-900/10 py-4 text-sm font-bold text-sky-900"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-sky-500"></span>Konsultasi praktis tatap muka</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INVESTASI ===================== -->
+  <section id="investasi" class="wash-dark relative w-full overflow-hidden py-20 text-white sm:py-28">
+    <div class="bg-grid pointer-events-none absolute inset-0 opacity-[0.16]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-sky-400/20 blur-3xl bob" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-24 right-1/4 h-72 w-72 rounded-full bg-rose-500/20 blur-3xl bob" style="animation-delay:-3.5s" aria-hidden="true"></div>
+
+    <div class="relative w-full px-5 sm:px-8 lg:px-12">
+      <div class="grid w-full gap-14 lg:grid-cols-12 lg:gap-16">
+
+        <div class="lg:col-span-7">
+          <h2 class="font-display reveal text-[clamp(1.9rem,4.4vw,3.4rem)] leading-[1.02]">
+            Investasi terjangkau,<br>dampaknya jangka panjang.
+          </h2>
+
+          <p class="reveal mt-9 text-sm font-bold text-sky-200/70 line-through">Harga normal Rp 149.000</p>
+          <p class="font-display reveal text-[clamp(3.4rem,11vw,7rem)] leading-none text-white">Rp 99.000</p>
+          <p class="reveal mt-3 text-xs font-semibold text-sky-200/75 sm:text-sm">Satu tiket masuk full day (10.00 sampai 17.00 WITA) · satu hari belajar yang mengubah cara Anda membangun penjualan online.</p>
+
+          <div class="reveal mt-10 w-full">
+            <p class="flex flex-wrap items-baseline justify-between gap-3 text-[11px] font-black uppercase tracking-[0.14em]">
+              <span class="text-sky-200">Kuota terisi: <span data-count="2" data-plain="true">0</span> peserta</span>
+              <span class="text-rose-300">Sisa <span data-count="48" data-plain="true">0</span> kursi</span>
+            </p>
+            <div class="mt-3 h-3 w-full overflow-hidden rounded-full bg-white/12" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100" aria-label="Kuota peserta terisi 4 persen">
+              <div id="quotaBar" class="h-full w-0 rounded-full bg-gradient-to-r from-sky-400 to-rose-400 transition-[width] duration-[1600ms] ease-out"></div>
+            </div>
+            <p class="mt-4 flex items-start gap-3 text-[11px] leading-relaxed text-sky-200/80 sm:text-xs">
+              <svg class="mt-px h-4 w-4 shrink-0 text-rose-300" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              <span>Pendaftaran <strong class="text-white">ditutup otomatis</strong> ketika total kuota <strong class="text-white">50 peserta</strong> terpenuhi. Amankan kursi Anda selagi tersedia.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <p class="reveal text-[10px] font-black uppercase tracking-[0.26em] text-sky-300">Yang Anda Dapatkan</p>
+          <ul class="mt-6 w-full">
+            <li class="reveal flex items-start gap-4 border-t border-white/12 py-5 text-sm font-bold text-sky-50">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-rose-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Akses penuh seminar &amp; workshop 1 hari
+            </li>
+            <li class="reveal flex items-start gap-4 border-t border-white/12 py-5 text-sm font-bold text-sky-50">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-sky-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Networking dengan ratusan seller KPOG
+            </li>
+            <li class="reveal flex items-start gap-4 border-t border-white/12 py-5 text-sm font-bold text-sky-50">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-rose-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Konsultasi praktis tatap muka
+            </li>
+            <li class="reveal flex items-start gap-4 border-y border-white/12 py-5 text-sm font-bold text-sky-50">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-sky-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Bimbingan langsung dari Bundadari Ainun
+            </li>
+          </ul>
+
+            <button type="button" onclick="daftarWA()" class="btn btn-primary reveal mt-9 inline-flex w-full items-center justify-center gap-3 rounded-full px-8 py-4 text-sm font-black sm:text-base">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 016.988 2.896 9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.142 1.595 5.945L0 24l6.305-1.654a11.96 11.96 0 005.719 1.453h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+            Join Sekarang via WhatsApp
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="relative w-full bg-[#fffdf9] py-20 sm:py-28">
+    <div class="w-full px-5 sm:px-8 lg:px-12">
+      <div class="grid w-full gap-10 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-4">
+          <p class="reveal text-[10px] font-black uppercase tracking-[0.26em] text-rose-600">FAQ</p>
+          <h2 class="font-display reveal mt-4 text-[clamp(2rem,4.4vw,3.2rem)] text-[#082f49]">Hal yang sering ditanyakan</h2>
+          <p class="reveal mt-5 text-sm leading-relaxed text-sky-900/70">
+            Berikut ringkasan jawaban penting sebelum Anda daftar, supaya proses pendaftaran lebih cepat dan jelas.
+          </p>
+        </div>
+
+        <div class="lg:col-span-8">
+          <div class="w-full border-t border-sky-900/10">
+            <details class="reveal group border-b border-sky-900/10">
+              <summary class="flex items-center justify-between gap-5 py-6">
+                <span class="text-sm font-black text-[#082f49] transition-colors group-hover:text-sky-700 sm:text-lg">Apakah pemula yang belum punya produk boleh ikut?</span>
+                <span class="acc-chev grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sky-100 text-sky-700">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m7-7H5"/></svg>
+                </span>
+              </summary>
+              <div class="acc-body"><div class="acc-inner"><p class="pb-7 pr-12 text-sm leading-relaxed text-sky-900/75">Sangat boleh. Di Kopdar Batch 5 Anda belajar Pondasi 1 (Strong Why) dan Pondasi 2 (Bedah Produk), sehingga Anda tahu cara memilih produk yang bermanfaat, menguntungkan, dan dibutuhkan pasar sejak hari pertama.</p></div></div>
+            </details>
+
+            <details class="reveal group border-b border-sky-900/10">
+              <summary class="flex items-center justify-between gap-5 py-6">
+                <span class="text-sm font-black text-[#082f49] transition-colors group-hover:text-sky-700 sm:text-lg">Bagaimana jika saya belum terdaftar sebagai member KPOG?</span>
+                <span class="acc-chev grid h-8 w-8 shrink-0 place-items-center rounded-full bg-rose-100 text-rose-600">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m7-7H5"/></svg>
+                </span>
+              </summary>
+              <div class="acc-body"><div class="acc-inner"><p class="pb-7 pr-12 text-sm leading-relaxed text-sky-900/75">Anda tetap dapat mendaftar. Dengan hadir di Kopdar Batch 5, Anda otomatis diterima dan terhubung langsung ke dalam keluarga besar Komunitas Penjual Online Gorontalo.</p></div></div>
+            </details>
+
+            <details class="reveal group border-b border-sky-900/10">
+              <summary class="flex items-center justify-between gap-5 py-6">
+                <span class="text-sm font-black text-[#082f49] transition-colors group-hover:text-sky-700 sm:text-lg">Apa saja yang perlu dibawa saat acara?</span>
+                <span class="acc-chev grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sky-100 text-sky-700">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m7-7H5"/></svg>
+                </span>
+              </summary>
+              <div class="acc-body"><div class="acc-inner"><p class="pb-7 pr-12 text-sm leading-relaxed text-sky-900/75">Cukup bawa smartphone dengan daya terisi penuh untuk simulasi, alat tulis untuk mencatat, serta sampel produk usaha Anda (jika ada) untuk saling berjejaring dengan peserta lain.</p></div></div>
+            </details>
+
+            <details class="reveal group border-b border-sky-900/10">
+              <summary class="flex items-center justify-between gap-5 py-6">
+                <span class="text-sm font-black text-[#082f49] transition-colors group-hover:text-sky-700 sm:text-lg">Bagaimana mekanisme pembayaran investasi Rp 99.000?</span>
+                <span class="acc-chev grid h-8 w-8 shrink-0 place-items-center rounded-full bg-rose-100 text-rose-600">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m7-7H5"/></svg>
+                </span>
+              </summary>
+              <div class="acc-body"><div class="acc-inner"><p class="pb-7 pr-12 text-sm leading-relaxed text-sky-900/75">Setelah Anda klik tombol daftar dan mengirim pesan WhatsApp, kami akan mengirimkan link pendaftaran resmi ke nomor WhatsApp Anda.</p></div></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA PENUTUP ===================== -->
+  <section class="relative w-full overflow-hidden bg-[#fef3e2] py-16 sm:py-24" aria-label="Ajakan bergabung">
+    <div class="bg-dots pointer-events-none absolute inset-0 opacity-60" aria-hidden="true"></div>
+    <div class="relative w-full px-5 text-center sm:px-8 lg:px-12">
+      <h2 class="font-display reveal mx-auto max-w-[22ch] text-[clamp(1.9rem,5.6vw,4rem)] text-[#082f49]">
+        Siap membangun pondasi jualan yang kokoh?
+      </h2>
+      <p class="reveal mt-5 text-sm font-semibold text-sky-900/75 sm:text-base">Amankan kursi Anda sebelum kuota 50 peserta terpenuhi.</p>
+      <button type="button" onclick="daftarWA()" class="btn btn-primary reveal mt-9 inline-flex items-center gap-3 rounded-full px-9 py-4 text-sm font-black sm:text-base">
+        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 016.988 2.896 9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.142 1.595 5.945L0 24l6.305-1.654a11.96 11.96 0 005.719 1.453h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+        Daftar Kopdar Batch 5
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== COUNTDOWN ===================== -->
+  <section class="relative w-full overflow-hidden bg-[#082f49] py-14 text-white sm:py-20" aria-label="Hitung mundur acara">
+    <div class="bg-grid pointer-events-none absolute inset-0 opacity-[0.16]" aria-hidden="true"></div>
+    <div class="relative w-full px-5 sm:px-8 lg:px-12">
+      <p class="reveal text-center text-[10px] font-black uppercase tracking-[0.24em] text-sky-200">Hitung Mundur Kopdar Batch 5</p>
+      <h3 class="font-display reveal mt-4 text-center text-[clamp(1.7rem,5.6vw,3.4rem)]">Menuju hari acara</h3>
+
+      <div class="count-line reveal mt-8 h-px w-full" aria-hidden="true"></div>
+
+      <ul class="reveal mt-7 grid w-full grid-cols-2 gap-y-6 text-center sm:grid-cols-4" aria-live="polite">
+        <li>
+          <span id="cdDays" class="font-display block text-5xl leading-none text-sky-200 sm:text-6xl">00</span>
+          <span class="mt-2 block text-[10px] font-black uppercase tracking-[0.2em] text-sky-200/70">Hari</span>
+        </li>
+        <li>
+          <span id="cdHours" class="font-display block text-5xl leading-none text-sky-200 sm:text-6xl">00</span>
+          <span class="mt-2 block text-[10px] font-black uppercase tracking-[0.2em] text-sky-200/70">Jam</span>
+        </li>
+        <li>
+          <span id="cdMinutes" class="font-display block text-5xl leading-none text-sky-200 sm:text-6xl">00</span>
+          <span class="mt-2 block text-[10px] font-black uppercase tracking-[0.2em] text-sky-200/70">Menit</span>
+        </li>
+        <li>
+          <span id="cdSeconds" class="font-display block text-5xl leading-none text-sky-200 sm:text-6xl">00</span>
+          <span class="mt-2 block text-[10px] font-black uppercase tracking-[0.2em] text-sky-200/70">Detik</span>
+        </li>
+      </ul>
+
+      <div class="count-line reveal mt-7 h-px w-full" aria-hidden="true"></div>
+      <p id="countdownNote" class="reveal mt-5 text-center text-xs font-semibold text-sky-200/80 sm:text-sm">Siapkan jadwal Anda dan amankan kursi lebih awal.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative w-full overflow-hidden bg-[#082f49] py-14 text-sky-300">
+  <div class="bg-grid pointer-events-none absolute inset-0 opacity-[0.14]" aria-hidden="true"></div>
+  <div class="relative w-full px-5 sm:px-8 lg:px-12">
+    <div class="flex w-full flex-col items-center gap-10 border-b border-white/10 pb-10 md:flex-row md:items-start md:justify-between">
+      <div>
+        <p class="font-display text-3xl text-white">KPOG</p>
+        <p class="mt-2 text-[10px] font-black uppercase tracking-[0.22em] text-rose-300">Bertemu · Belajar · Berpenghasilan</p>
+      </div>
+      <p class="max-w-[46ch] text-center text-xs leading-relaxed text-sky-400/80 md:text-right">
+        Wadah kolaborasi dan silaturahmi pelaku usaha jualan online di Gorontalo, saling menumbuhkan, memperkuat pondasi pemasaran, dan memajukan ekonomi daerah.
+      </p>
+    </div>
+    <p class="pt-7 text-center text-[11px] text-sky-500/75 md:text-left">&copy; 2026 KPOG, Komunitas Penjual Online Gorontalo. Hak cipta dilindungi.</p>
+  </div>
+</footer>
+
+<!-- ===================== MOBILE STICKY CTA ===================== -->
+<aside class="fixed bottom-0 left-0 right-0 z-40 border-t border-sky-900/10 bg-[#fffdf9]/95 p-3 backdrop-blur-xl md:hidden" aria-label="Aksi cepat pendaftaran">
+  <div class="flex items-center justify-between gap-3">
+    <p class="shrink-0 leading-none">
+      <span class="block text-[9px] font-black uppercase tracking-[0.16em] text-sky-600">Investasi Tiket</span>
+      <strong class="font-display mt-1 block text-xl text-[#082f49]">Rp 99.000</strong>
+    </p>
+    <button type="button" onclick="daftarWA()" class="btn btn-primary flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3.5 text-xs font-black uppercase tracking-wider">
+      <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 016.988 2.896 9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.142 1.595 5.945L0 24l6.305-1.654a11.96 11.96 0 005.719 1.453h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+      Daftar Sekarang
+    </button>
+  </div>
+</aside>
+
+<script>
+  /* ---------- WhatsApp ---------- */
+  function daftarWA(){
+    const target = "6282146574567";
+    const message =
+`Halo, saya ingin mendaftar untuk:
+KOPDAR BATCH 5: 7 PONDASI JUALAN ONLINE
+
+Mohon informasi lebih lanjut mengenai cara pembayaran dan konfirmasi kursi saya. Terima kasih.`;
+    window.open(`https://api.whatsapp.com/send?phone=${target}&text=${encodeURIComponent(message)}`, "_blank");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("siteHeader");
+    const progressBar = document.getElementById("progressBar");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* ---------- smooth scroll ---------- */
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const id = link.getAttribute("href").slice(1);
+        if (!id) return;
+        e.preventDefault();
+        if (id === "beranda") { window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); return; }
+        const target = document.getElementById(id);
+        if (!target) return;
+        const offset = (header ? header.offsetHeight : 72) + 12;
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: reduceMotion ? "auto" : "smooth" });
+      });
+    });
+
+    /* ---------- scrollspy ---------- */
+    const navLinks = Array.from(document.querySelectorAll("#mainNav a.nav-link"));
+    const spy = navLinks
+      .map((l) => ({ id: l.getAttribute("href").slice(1), link: l, el: document.getElementById(l.getAttribute("href").slice(1)) }))
+      .filter((i) => i.el);
+
+    function onScroll(){
+      const y = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      if (progressBar) progressBar.style.transform = `scaleX(${docH > 0 ? Math.min(y / docH, 1) : 0})`;
+      if (header) header.classList.toggle("shadow-[0_10px_30px_-18px_rgba(8,47,73,0.55)]", y > 10);
+
+      const pos = y + (header ? header.offsetHeight : 72) + 60;
+      let current = spy.length ? spy[0].id : null;
+      spy.forEach((s) => { if (s.el.offsetTop <= pos) current = s.id; });
+      navLinks.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + current));
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    onScroll();
+
+    /* ---------- reveal + line masks ---------- */
+    const revealTargets = document.querySelectorAll(".reveal, .reveal-line");
+    if ("IntersectionObserver" in window && !reduceMotion){
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting){
+            entry.target.classList.add("show");
+            io.unobserve(entry.target);
+            if (entry.target.hasAttribute("data-quota")) animateQuota();
+          }
+        });
+      }, { threshold: 0.14, rootMargin: "0px 0px -50px 0px" });
+      revealTargets.forEach((el) => io.observe(el));
+    } else {
+      revealTargets.forEach((el) => el.classList.add("show"));
+    }
+
+    /* ---------- count up ---------- */
+    function countUp(el){
+      const target = parseFloat(el.dataset.count || "0");
+      const suffix = el.dataset.suffix || "";
+      const plain = el.dataset.plain === "true";
+      if (reduceMotion || plain){ el.textContent = target.toLocaleString("id-ID") + suffix; return; }
+      const dur = 1300, t0 = performance.now();
+      (function step(now){
+        const p = Math.min((now - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased).toLocaleString("id-ID") + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      })(t0);
+    }
+    const counters = document.querySelectorAll("[data-count]");
+    if ("IntersectionObserver" in window){
+      const co = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting){ countUp(entry.target); co.unobserve(entry.target); }
+        });
+      }, { threshold: 0.6 });
+      counters.forEach((el) => co.observe(el));
+    } else {
+      counters.forEach(countUp);
+    }
+
+    /* ---------- kuota bar ---------- */
+    let quotaDone = false;
+    function animateQuota(){
+      const bar = document.getElementById("quotaBar");
+      if (!bar || quotaDone) return;
+      quotaDone = true;
+      setTimeout(() => { bar.style.width = "4%"; }, 220);
+    }
+    if ("IntersectionObserver" in window){
+      const qo = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting){ animateQuota(); qo.disconnect(); } });
+      }, { threshold: 0.4 });
+      const q = document.getElementById("quotaBar");
+      if (q) qo.observe(q);
+    } else animateQuota();
+
+    /* ---------- countdown ---------- */
+    const countdownTarget = new Date("2026-10-04T10:00:00+08:00").getTime();
+    const cd = {
+      d: document.getElementById("cdDays"),
+      h: document.getElementById("cdHours"),
+      m: document.getElementById("cdMinutes"),
+      s: document.getElementById("cdSeconds"),
+      note: document.getElementById("countdownNote")
+    };
+    const prev = { d: "", h: "", m: "", s: "" };
+
+    function setDigit(el, value, key){
+      if (!el) return;
+      const text = String(value).padStart(2, "0");
+      if (prev[key] !== text){
+        el.textContent = text;
+        if (!reduceMotion){
+          el.classList.remove("digit-pop");
+          void el.offsetWidth;
+          el.classList.add("digit-pop");
+        }
+        prev[key] = text;
+      }
+    }
+
+    function updateCountdown(){
+      const now = Date.now();
+      let diff = countdownTarget - now;
+
+      if (diff <= 0){
+        setDigit(cd.d, 0, "d");
+        setDigit(cd.h, 0, "h");
+        setDigit(cd.m, 0, "m");
+        setDigit(cd.s, 0, "s");
+        if (cd.note) cd.note.textContent = "Acara sudah dimulai. Sampai bertemu di lokasi.";
+        return;
+      }
+
+      const days = Math.floor(diff / 86400000);
+      diff -= days * 86400000;
+      const hours = Math.floor(diff / 3600000);
+      diff -= hours * 3600000;
+      const minutes = Math.floor(diff / 60000);
+      diff -= minutes * 60000;
+      const seconds = Math.floor(diff / 1000);
+
+      setDigit(cd.d, days, "d");
+      setDigit(cd.h, hours, "h");
+      setDigit(cd.m, minutes, "m");
+      setDigit(cd.s, seconds, "s");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* ---------- accordion: buka satu saja ---------- */
+    const allDetails = Array.from(document.querySelectorAll("#faq details"));
+    allDetails.forEach((d) => {
+      d.addEventListener("toggle", () => {
+        if (d.open) allDetails.forEach((o) => { if (o !== d) o.open = false; });
+      });
+    });
+  });
+</script>
+</body>
+</html>
